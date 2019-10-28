@@ -6,7 +6,7 @@ name = (input("Ex1:Please enter your name: "))
 
 Ex2: 
 
-print("Ex 2:This program rounds the division to the next integer in the positive direction")
+print("Ex 2:We will round the division to the next integer in the positive direction")
 
 	number_1 = float(input("Please enter the first number: "))
 
@@ -29,13 +29,13 @@ print("Ex 2:This program rounds the division to the next integer in the positive
 
 	print("The float value of the division is: ", division, "The rounded up division is: ", rounded_division)
 
-	print("The correctly rounded version is: ", correct_round)
+	print("The correct rounded version is: ", correct_round)
 
 Ex3:
 
 print("Ex3:We will find surface of a circle given its radius.")
 
-	radius = float(input("Please input the circle's radius: "))
+	radius = float(input("Please type in the circle's radius: "))
 
 
 	pi = 3.14
