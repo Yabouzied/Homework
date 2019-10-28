@@ -1,0 +1,57 @@
+Ex 1:
+
+name = (input("Ex1:Please enter your name: "))
+
+	print("Hello %s !" % name)
+
+Ex2: 
+
+print("Ex 2:This program rounds the division to the next integer in the positive direction")
+
+	number_1 = float(input("Please enter the first number: "))
+
+	number_2 = float(input("Please enter the second number: "))
+
+
+	division = (number_1/number_2)
+
+	rounded_division = 0
+
+
+	if division-int(division) != 0:
+
+	    if division > 0:
+
+	        rounded_division = int(division + 1)
+
+	correct_round = round(division)
+  
+
+	print("The float value of the division is: ", division, "The rounded up division is: ", rounded_division)
+
+	print("The correctly rounded version is: ", correct_round)
+
+Ex3:
+
+print("Ex3:We will find surface of a circle given its radius.")
+
+	radius = float(input("Please input the circle's radius: "))
+
+
+	pi = 3.14
+
+	area = pi*radius*2
+
+	print("The area of the circle of radius %f is:%.2f" % radius, area)
+
+Ex4:
+
+import math.random 
+
+print("Ex4:It's a calculator using the eval() function to "
+
+	      "solve math expressions done in Python syntax.")
+
+	calculation = eval(input("Please type in the calculation: "))
+
+	print("The solution is: “+ calculation)
