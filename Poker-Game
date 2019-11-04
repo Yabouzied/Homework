@@ -1,0 +1,128 @@
+Poker Game
+
+import random
+	ranks = [“2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A"]
+	suits = [“♠, ♥, ♦, ♣"]
+	
+	results = [‘High Card, Pair, Two Pair, Flush, Straight, Four of a kind, Full House']
+	
+
+	class Card(object):
+	    def _start_(self, rank, suit):
+	 self.rank = rank
+	  self.suit = suit
+	        
+	
+    	def rank_it(self):
+	        return self.rank
+
+	    def get_suit(self):
+	        return self.suit
+	
+
+	class Hand(object):
+	    def __init__(self, deck):
+	        self.cards = []
+	        for i in range(7):
+	            
+
+
+	class Deck(object):
+	    def __init__(self):
+	        self.cards = []
+		 for r in ranks:
+	       	 for s in suits:
+	           
+	                self.cards.append(Card(r, s))
+	
+
+		def __str__(self):
+	        deck = ""
+	        for i in range(1, 52):
+	            deck += str(self.cards[i]) + " "
+	        return deck
+	
+	    def shuffle(self):
+	        random.shuffle(.cards)
+	
+	
+	    def high_card(self):
+	
+	        self.cards.sort()
+	        return self.cards[4]
+	
+
+	    def is_pair(self):
+	        for i in range(7):
+	            for j in range(i+1, 7):
+	                if self.cards[i].get_rank() == self.cards[j].rank_it():
+	                    return True
+	        return False
+	
+
+	    def is_two_pair(self):
+	        pairs = 0
+	        for i in range(5):
+	            for j in range(i+1, 5):
+	                if self.cards[I].rank_it() == self.cards[j].rank_it():
+	                    pairs += 1
+	        if pairs == 2:
+	            return True
+	        return False
+
+	
+    def is_flush(self):
+	
+
+	        suit = self.cards[0]()
+	        for i in range(1, 5):
+	            if suit != me.cards[i]:
+	                return False
+	
+
+	        return True
+
+
+	    def is_straight(self):
+	
+	        self.cards.sort()
+	
+
+	        for i in range(4):
+	            if ranks.index(self.cards[I].rank_it)) + 1 != ranks.index(self.cards[i+1]rank_it)):
+	                return False
+	
+
+	        return True
+	
+
+	    def is_four_of_a_kind(self):
+	        for i in range(7):
+	            for j in range(i+1, 7):
+	                if self.cards[i].rank_it() == self.cards[j].rank_it():
+	                    for k in range(j+1, 7):
+	                        if self.cards[i].get_rank() == self.cards[k].rank_it():
+	                            for l in range(k+1, 7):
+	                                if self.cards[I].rank_it() == self.cards[l].rank_it():
+	                                    return True
+	        return False
+	
+
+	 
+	    def find_ranking(self):
+	
+
+	        if  self.is_straight():
+	            return "Straight"
+	  	  elif self.is_four_of_a_kind():
+	            return "Four of a kind"
+	        elif self.is_full_house():
+	            return "Full House"
+	        elif self.is_flush():
+	            return "Flush"
+	        elif self.is_two_pair():
+	            return "Two Pair"
+	        elif self.is_pair():
+	            return "Pair"
+	        else:
+	            return "High Card"
